@@ -38,4 +38,8 @@ export class TaskListComponent implements OnInit, OnDestroy {
     console.log(task);
     this.realize.taskRealize(task);
   }
+
+  public deleteTask(id: string) {
+    this.taskService.delete(id);
+  }
 }

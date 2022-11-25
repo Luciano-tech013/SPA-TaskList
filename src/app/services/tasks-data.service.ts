@@ -32,4 +32,9 @@ export class TasksDataService {
         })
       );
   }
+
+  public delete(id: string) {
+    console.log(id);
+    return this.http.delete(URL + '/' + id);
+  }
 }

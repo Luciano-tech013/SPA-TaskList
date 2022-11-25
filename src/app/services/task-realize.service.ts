@@ -15,10 +15,14 @@ export class TaskRealizeService {
 
   public taskRealize(task: Tasks) {
     let item = this._taskList.find((v1) => v1.titulo == task.titulo);
-    if (item!) {
+    if (!item) {
       this._taskList.push({ ... task });
     }
-    console.log(this._taskList);
+    this.taskList.next(this._taskList);
+  }
+
+  public deleteRealize(task: Tasks) {
+    this._taskList = this._taskList.filter((v1) => v1 != task);
     this.taskList.next(this._taskList);
   }
 }

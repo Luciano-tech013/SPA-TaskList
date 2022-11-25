@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { TaskRealizeService } from 'src/app/services/task-realize.service';
 import { Tasks } from '../tasks/tasks';
 
@@ -10,17 +10,22 @@ import { Tasks } from '../tasks/tasks';
 })
 export class RealizeTasksComponent implements OnInit {
 
-  taskList$: Observable<Tasks[]>;
+  taskList: Tasks[] = [];
 
   constructor(private realize: TaskRealizeService) {
-    this.taskList$ = realize.taskList.asObservable();
+    this.realize.taskList.subscribe(t => this.taskList = t);
+    console.log(this.taskList);
+
   }
 
   ngOnInit(): void {
   }
 
   ngOnDestroy() {
-
+    this.realize.taskList.unsubscribe();
   }
 
+  public deleteTaskRealize(task: Tasks) {
+    this.realize.deleteRealize(task);
+  }
 }
