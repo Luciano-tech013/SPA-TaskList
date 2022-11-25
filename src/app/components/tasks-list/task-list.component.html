@@ -1,0 +1,12 @@
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let task of tasks">
+    <span class="fs-4">
+      <b>{{task.titulo}}</b> -
+      <b>{{task.descripcion}}</b>
+      <div>
+        <button class="btn btn-badge text-bg-success"
+        (click)="addRealize(this.task)">Agregar</button>
+      </div>
+    </span>
+  </li>
+</ul>

@@ -1,0 +1,15 @@
+<section>
+  <div class="container">
+      <div class="p-4 bg-light mt-3">
+        <form class="g-3 mt-2" [formGroup]="formTask" (ngSubmit)="addTask()">
+          <div class="mb-4">
+            <input type="text" class="form-control" name="titulo" formControlName="titulo" placeholder="Titulo: ">
+          </div>
+          <div class="mb-4">
+            <textarea type="text" class="form-control" name="descripcion" formControlName="descripcion" placeholder="Descripcion: "></textarea>
+          </div>
+          <button class="btn btn-badge text-bg-success" type="submit">ENVIAR</button>
+        </form>
+      </div>
+   </div>
+</section>
