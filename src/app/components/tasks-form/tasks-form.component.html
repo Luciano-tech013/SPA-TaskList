@@ -6,6 +6,15 @@
             <input type="text" class="form-control" name="titulo" formControlName="titulo" placeholder="Titulo: ">
           </div>
           <div class="mb-4">
+            <label for="importancia">¿Es importante?</label>
+            <br>
+            <select type="text" class="form" name="importancia" formControlName="importancia" placeholder="Importancia: ">
+              <option selected>Seleccione...</option>
+              <option [value]="true">SI</option>
+              <option [value]="false">NO</option>
+            </select>
+          </div>
+          <div class="mb-4">
             <textarea type="text" class="form-control" name="descripcion" formControlName="descripcion" placeholder="Descripcion: "></textarea>
           </div>
           <button class="btn btn-badge text-bg-success" type="submit">ENVIAR</button>

@@ -1,11 +1,16 @@
-<ul  class="list-group">
-  <li class="list-group-item" *ngFor="let task of taskList">
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let task of taskList" [ngClass]="{'importancia': task.importancia}">
     <span class="fs-4">
       <b>{{task.titulo}}</b> -
       <b>{{task.descripcion}}</b>
+      <div>
+        <button class="btn btn-badge text-bg-danger" (click)="deleteTaskRealize(task)">Borrar</button>
+      </div>
     </span>
-    <div>
-      <button class="btn btn-badge text-bg-danger" (click)="deleteTaskRealize(task)">Borrar</button>
-    </div>
   </li>
 </ul>
+
+
+
+
+

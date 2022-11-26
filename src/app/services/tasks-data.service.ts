@@ -4,7 +4,7 @@ import { Observable, Subject } from 'rxjs';
 import { Tasks } from '../components/tasks/tasks';
 import { tap } from 'rxjs/operators';
 
-const URL = "https://637adf4610a6f23f7f9a299e.mockapi.io/api/tasks";
+const URL = "https://6381471f786e112fe1c5fee0.mockapi.io/api/tasks";
 
 @Injectable({
   providedIn: 'root'

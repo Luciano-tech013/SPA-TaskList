@@ -18,7 +18,8 @@ export class TasksFormComponent implements OnInit {
   ) {
     this.formTask = this.formBuilder.group({
       titulo: [''],
-      descripcion: ['']
+      descripcion: [''],
+      importancia: ['']
     });
    }
 
