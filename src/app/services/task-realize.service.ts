@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { TaskListComponent } from '../components/tasks-list/task-list.component';
 import { Tasks } from '../components/tasks/tasks';
 
 @Injectable({

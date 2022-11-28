@@ -25,6 +25,7 @@ export class TasksDataService {
   }
 
   public add(tasks: Tasks) {
+    console.log(tasks);
     return this.http.post(URL, tasks)
       .pipe(
         tap(() => {
@@ -34,7 +35,12 @@ export class TasksDataService {
   }
 
   public delete(id: string) {
-    console.log(id);
-    return this.http.delete(URL + '/' + id);
+    let urlAPI: string = `${URL}/${id}`;
+    return this.http.delete(urlAPI)
+      .pipe(
+        tap(() => {
+          this._refresh$.next();
+        })
+      );
   }
 }

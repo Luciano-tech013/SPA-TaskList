@@ -8,10 +8,10 @@
           <div class="mb-4">
             <label for="importancia">¿Es importante?</label>
             <br>
-            <select type="text" class="form" name="importancia" formControlName="importancia" placeholder="Importancia: ">
+            <select type="text" class="form" name="importancia" formControlName="importancia">
               <option selected>Seleccione...</option>
-              <option [value]="true">SI</option>
-              <option [value]="false">NO</option>
+              <option [value]=1>SI</option>
+              <option [value]=0>NO</option>
             </select>
           </div>
           <div class="mb-4">

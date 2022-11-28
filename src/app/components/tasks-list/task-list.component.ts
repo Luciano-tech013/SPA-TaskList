@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnDestroy} from '@angular/core';
 import { Subscription } from 'rxjs';
 import { TasksDataService } from 'src/app/services/tasks-data.service';
 import { TaskRealizeService } from 'src/app/services/task-realize.service';
@@ -24,7 +24,7 @@ export class TaskListComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.subscription.unsubscribe();
     console.log('Observable destruido');
   }
@@ -35,11 +35,10 @@ export class TaskListComponent implements OnInit, OnDestroy {
   }
 
   public addRealize(task: Tasks) {
-    console.log(task);
     this.realize.taskRealize(task);
   }
 
   public deleteTask(id: string) {
-    this.taskService.delete(id);
+    this.taskService.delete(id).subscribe();
   }
 }

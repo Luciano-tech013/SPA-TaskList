@@ -21,7 +21,7 @@ export class TasksFormComponent implements OnInit {
       descripcion: [''],
       importancia: ['']
     });
-   }
+  }
 
   ngOnInit(): void {
   }

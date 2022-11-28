@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RealizeTasksComponent } from './components/realize-tasks/realize-tasks.component';
 import { TasklistAboutComponent } from './components/tasklist-about/tasklist-about.component';
 import { TasklistContactComponent } from './components/tasklist-contact/tasklist-contact.component';
 import { TasksComponent } from './components/tasks/tasks.component';

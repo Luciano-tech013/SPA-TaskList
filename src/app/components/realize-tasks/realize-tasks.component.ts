@@ -13,8 +13,6 @@ export class RealizeTasksComponent implements OnInit {
 
   constructor(private realize: TaskRealizeService) {
     this.realize.taskList.subscribe(t => this.taskList = t);
-    console.log(this.taskList);
-
   }
 
   ngOnInit(): void {
